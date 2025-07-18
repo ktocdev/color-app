@@ -1,0 +1,18 @@
+:root {
+  /* ===== OCEAN THEME OVERRIDES ===== */
+  
+  /* Brand Colors */
+  --primary-color: #0ea5e9;
+  --primary-dark: #0284c7;
+  --secondary-color: #06b6d4;
+  --accent-color: #f59e0b;
+  
+  /* Status Colors */
+  --success-color: #10b981;
+  --warning-color: #f59e0b;
+  --error-color: #ef4444;
+  --info-color: #3b82f6;
+  
+  /* Hero Background */
+  --background-hero: linear-gradient(135deg, #0ea5e9 0%, #0284c7 100%);
+}
