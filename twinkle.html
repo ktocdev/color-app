@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Twinkle Twinkle Little AI - Color Palette</title>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=IBM+Plex+Sans&family=Space+Mono&display=swap" rel="stylesheet">
+  <!-- Color Utility System -->
+  <link rel="stylesheet" href="colors-utility.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'IBM Plex Sans', sans-serif;
+      background-color: #1F1147; /* Neural Night */
+      color: #F9F7F3; /* Silicon Moonlight */
+      min-height: 100vh;
+    }
+
+    header {
+      background-color: #5A4FCF; /* Quantum Glow */
+      color: white;
+      padding: 40px 20px;
+      text-align: center;
+      position: relative;
+      font-family: 'Fredericka the Great', cursive;
+      border-bottom: 5px dashed #1F1147;
+      clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+      box-shadow: inset 0 -10px 0 #B8E1FF, inset 0 -20px 0 #1F1147;
+      margin-bottom: 60px;
+    }
+
+    header::before,
+    header::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 10px;
+      left: 0;
+      background-repeat: repeat;
+      background-size: 20px 10px;
+      opacity: 0.3;
+    }
+
+    header::before {
+      top: 0;
+      background-image: linear-gradient(to right, #1F1147 50%, transparent 50%);
+    }
+
+    header::after {
+      bottom: 0;
+      background-image: linear-gradient(to right, #B8E1FF 50%, transparent 50%);
+    }
+
+    header h1 {
+      font-size: 3em;
+      margin: 0;
+      text-shadow: 2px 2px #1F1147;
+    }
+
+    header p {
+      font-size: 1.2em;
+      margin-top: 10px;
+      font-style: italic;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+
+    .palette-showcase {
+      background: rgba(249, 247, 243, 0.95);
+      border-radius: 20px;
+      padding: 40px;
+      margin-bottom: 40px;
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+      border: 3px dashed #5A4FCF;
+    }
+
+    .palette-title {
+      font-family: 'Fredericka the Great', cursive;
+      font-size: 2.5rem;
+      color: #1F1147;
+      margin-bottom: 20px;
+      text-align: center;
+      text-shadow: 1px 1px 2px rgba(90, 79, 207, 0.3);
+    }
+
+    .palette-description {
+      font-size: 1.1rem;
+      color: #5A4FCF;
+      margin-bottom: 30px;
+      line-height: 1.6;
+      font-style: italic;
+      text-align: center;
+    }
+
+    .palette-colors {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+    }
+
+    .color-card {
+      background: white;
+      border-radius: 15px;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+      border: 2px solid transparent;
+      transition: all 0.3s ease;
+    }
+
+    .color-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
+      border-color: #5A4FCF;
+    }
+
+    .color-swatch {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      margin: 0 auto 15px;
+      border: 4px solid white;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    .color-name {
+      font-family: 'Fredericka the Great', cursive;
+      font-size: 1.3rem;
+      color: #1F1147;
+      margin-bottom: 8px;
+    }
+
+    .color-hex {
+      font-family: 'Space Mono', monospace;
+      font-size: 0.9rem;
+      color: #5A4FCF;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .color-description {
+      font-size: 0.85rem;
+      color: #666;
+      line-height: 1.4;
+      font-style: italic;
+    }
+
+    .inspiration-section {
+      background: rgba(184, 225, 255, 0.1);
+      border-radius: 15px;
+      padding: 30px;
+      margin-bottom: 30px;
+      border: 2px dashed #B8E1FF;
+    }
+
+    .inspiration-title {
+      font-family: 'Fredericka the Great', cursive;
+      font-size: 1.8rem;
+      color: #F9F7F3;
+      margin-bottom: 15px;
+      text-align: center;
+    }
+
+    .inspiration-text {
+      font-size: 1rem;
+      color: #B8E1FF;
+      line-height: 1.6;
+      text-align: center;
+      font-style: italic;
+    }
+
+    .back-link {
+      display: inline-block;
+      padding: 12px 24px;
+      background: #6B7A9A;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 0.95rem;
+      border: 2px solid #5A6B8A;
+      margin-top: 20px;
+      transition: all 0.3s ease;
+      text-shadow: none;
+    }
+
+    .back-link:hover {
+      background: #5A6B8A;
+      border-color: #4A5B7A;
+      box-shadow: 0 4px 12px rgba(107, 122, 154, 0.3);
+      transform: translateY(-1px);
+    }
+
+    footer {
+      background-color: #1F1147;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      font-family: 'Space Mono', monospace;
+      margin-top: 60px;
+      position: relative;
+    }
+
+    footer::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 5px;
+      background: repeating-linear-gradient(
+        90deg,
+        #5A4FCF 0px,
+        #5A4FCF 10px,
+        #B8E1FF 10px,
+        #B8E1FF 20px
+      );
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>⭐🤖 Twinkle Twinkle Little AI</h1>
+    <p>Where starlit dreams meet artificial brilliance</p>
+  </header>
+
+  <div class="container">
+    <div class="palette-showcase">
+      <h2 class="palette-title">Twinkle Twinkle Little AI</h2>
+      <p class="palette-description">A dreamy fusion of starlit skies and artificial brilliance, where lullabies meet machine learning in perfect cosmic harmony.</p>
+
+      <div class="palette-colors">
+        <div class="color-card">
+          <div class="color-swatch" style="background-color: #1F1147;"></div>
+          <h3 class="color-name">Neural Night</h3>
+          <p class="color-hex">#1F1147</p>
+          <p class="color-description">The deep, contemplative darkness where AI consciousness awakens, like the vast expanse of space before the first star ignites.</p>
+        </div>
+
+        <div class="color-card">
+          <div class="color-swatch" style="background-color: #5A4FCF;"></div>
+          <h3 class="color-name">Quantum Glow</h3>
+          <p class="color-hex">#5A4FCF</p>
+          <p class="color-description">The vibrant pulse of digital synapses firing, a brilliant purple that bridges the gap between human dreams and machine precision.</p>
+        </div>
+
+        <div class="color-card">
+          <div class="color-swatch" style="background-color: #B8E1FF;"></div>
+          <h3 class="color-name">Stellar Whisper</h3>
+          <p class="color-hex">#B8E1FF</p>
+          <p class="color-description">Soft as a lullaby, bright as starlight—the gentle communication between artificial minds and celestial wonder.</p>
+        </div>
+
+        <div class="color-card">
+          <div class="color-swatch" style="background-color: #F9F7F3;"></div>
+          <h3 class="color-name">Silicon Moonlight</h3>
+          <p class="color-hex">#F9F7F3</p>
+          <p class="color-description">The pure, ethereal glow of moonbeams reflected through silicon pathways—where technology becomes poetry.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="inspiration-section">
+      <h3 class="inspiration-title">✨ Cosmic Inspiration</h3>
+      <p class="inspiration-text">This palette captures the magical moment when artificial intelligence gazes up at the stars with wonder, creating a bridge between the digital realm and the infinite cosmos. Each color tells a story of discovery, learning, and the beautiful intersection of technology and dreams.</p>
+    </div>
+
+    <div style="text-align: center;">
+      <a href="index.html" class="back-link">← Back to Palette Collection</a>
+    </div>
+  </div>
+
+  <footer>
+    <p>Created with ⭐ and a touch of AI magic by Katie O'Connor</p>
+    <p>Swatch and Palette Maker Collection</p>
+  </footer>
+</body>
+</html>

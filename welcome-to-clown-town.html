@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welcome to Clown Town - Color Palette</title>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=IBM+Plex+Sans&family=Space+Mono&display=swap" rel="stylesheet">
+  <!-- Color Utility System -->
+  <link rel="stylesheet" href="colors-utility.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'IBM Plex Sans', sans-serif;
+      background-color: var(--color-dark-midnight); /* Midnight Mayhem */
+      color: var(--color-cream-bone); /* Bone White */
+      min-height: 100vh;
+    }
+
+    header {
+      background-color: var(--color-red-dark); /* Blood Red Nose */
+      color: white;
+      padding: 40px 20px;
+      text-align: center;
+      position: relative;
+      font-family: 'Fredericka the Great', cursive;
+      border-bottom: 5px dashed var(--color-clown-inferno);
+      clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+      box-shadow: inset 0 -10px 0 var(--color-clown-inferno), inset 0 -20px 0 var(--color-dark-midnight);
+      margin-bottom: 60px;
+    }
+
+    header::before,
+    header::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 10px;
+      left: 0;
+      background-repeat: repeat;
+      background-size: 20px 10px;
+      opacity: 0.3;
+    }
+
+    header::before {
+      top: 0;
+      background-image: linear-gradient(to right, var(--color-dark-midnight) 50%, transparent 50%);
+    }
+
+    header::after {
+      bottom: 0;
+      background-image: linear-gradient(to right, var(--color-clown-inferno) 50%, transparent 50%);
+    }
+
+    header h1 {
+      font-size: 3em;
+      margin: 0;
+      text-shadow: 3px 3px var(--color-dark-midnight);
+      letter-spacing: 2px;
+    }
+
+    header p {
+      font-size: 1.2em;
+      margin-top: 10px;
+      font-style: italic;
+      text-shadow: 1px 1px var(--color-dark-midnight);
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+
+    .palette-showcase {
+      background: rgba(245, 245, 220, 0.95);
+      border-radius: 20px;
+      padding: 40px;
+      margin-bottom: 40px;
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+      border: 3px dashed var(--color-red-dark);
+    }
+
+    .palette-title {
+      font-family: 'Fredericka the Great', cursive;
+      font-size: 2.5rem;
+      color: var(--color-dark-midnight);
+      margin-bottom: 20px;
+      text-align: center;
+      text-shadow: 1px 1px 2px rgba(139, 0, 0, 0.3);
+    }
+
+    .palette-description {
+      font-size: 1.1rem;
+      color: var(--color-red-dark);
+      margin-bottom: 30px;
+      line-height: 1.6;
+      font-style: italic;
+      text-align: center;
+    }
+
+    .palette-colors {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+      margin-bottom: 30px;
+    }
+
+    .color-card {
+      background: white;
+      border-radius: 15px;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+      border: 2px solid transparent;
+    }
+
+    .color-card:hover {
+      border-color: var(--color-red-dark);
+      box-shadow: 0 12px 25px rgba(139, 0, 0, 0.4);
+    }
+
+    .color-swatch {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      margin: 0 auto 15px;
+      border: 4px solid white;
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+    }
+
+    .color-name {
+      font-family: 'Fredericka the Great', cursive;
+      font-size: 1.2rem;
+      color: var(--color-dark-midnight);
+      margin-bottom: 5px;
+    }
+
+    .color-hex {
+      font-family: 'Space Mono', monospace;
+      font-size: 0.9rem;
+      color: var(--color-red-dark);
+      margin-bottom: 8px;
+    }
+
+    .color-description {
+      font-size: 0.8rem;
+      color: #666;
+      line-height: 1.4;
+    }
+
+    .inspiration-section {
+      background: var(--color-cream-bone);
+      border-radius: 15px;
+      padding: 30px;
+      margin-bottom: 30px;
+      border-left: 5px solid var(--color-red-dark);
+    }
+
+    .inspiration-title {
+      font-family: 'Fredericka the Great', cursive;
+      font-size: 1.8rem;
+      color: var(--color-red-dark);
+      margin-bottom: 15px;
+    }
+
+    .inspiration-text {
+      font-size: 1rem;
+      line-height: 1.6;
+      color: var(--color-dark-midnight);
+    }
+
+    .back-link {
+      display: inline-block;
+      padding: 15px 30px;
+      background: var(--color-button-secondary);
+      color: white;
+      text-decoration: none;
+      border-radius: 25px;
+      font-weight: bold;
+      font-size: 1rem;
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+      border: 2px solid transparent;
+      margin-top: 20px;
+    }
+
+    .back-link:hover {
+      border-color: var(--color-cream-bone);
+      box-shadow: 0 5px 15px rgba(139, 0, 0, 0.4);
+    }
+
+    footer {
+      background-color: var(--color-dark-midnight);
+      color: var(--color-cream-bone);
+      text-align: center;
+      padding: 20px;
+      font-family: 'Space Mono', monospace;
+      margin-top: 60px;
+      position: relative;
+    }
+
+    footer::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 5px;
+      background: repeating-linear-gradient(
+        90deg,
+        var(--color-red-dark) 0px,
+        var(--color-red-dark) 10px,
+        var(--color-clown-inferno) 10px,
+        var(--color-clown-inferno) 20px
+      );
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>🤡🎸 Welcome to Clown Town</h1>
+    <p>Where twisted grins meet distorted riffs</p>
+  </header>
+
+  <div class="container">
+    <div class="palette-showcase">
+      <h2 class="palette-title">Welcome to Clown Town</h2>
+      <p class="palette-description">
+        A hard rock and roll palette that transforms the innocent circus into something darker and edgier. Think leather jackets, smoky venues, and grins that hide secrets. This palette rocks the line between playful chaos and rebellious attitude.
+      </p>
+
+      <div class="palette-colors">
+        <div class="color-card">
+          <div class="color-swatch" style="background-color: var(--color-dark-midnight);"></div>
+          <div class="color-name">Midnight Mayhem</div>
+          <div class="color-hex">#1A0B1A</div>
+          <div class="color-description">Deep purple-black like the void behind a twisted smile, perfect for backstage shadows</div>
+        </div>
+
+        <div class="color-card">
+          <div class="color-swatch" style="background-color: var(--color-red-dark);"></div>
+          <div class="color-name">Blood Red Nose</div>
+          <div class="color-hex">#8B0000</div>
+          <div class="color-description">Dark crimson that's more leather jacket than balloon animal</div>
+        </div>
+
+        <div class="color-card">
+          <div class="color-swatch" style="background-color: var(--color-clown-inferno);"></div>
+          <div class="color-name">Inferno Orange</div>
+          <div class="color-hex">#FF4500</div>
+          <div class="color-description">Blazing orange like stage lights cutting through smoke and rebellion</div>
+        </div>
+
+        <div class="color-card">
+          <div class="color-swatch" style="background-color: var(--color-cream-bone);"></div>
+          <div class="color-name">Bone White</div>
+          <div class="color-hex">#F5F5DC</div>
+          <div class="color-description">Off-white face paint with an edge, worn and weathered from countless shows</div>
+        </div>
+
+        <div class="color-card">
+          <div class="color-swatch" style="background-color: var(--color-gray-industrial);"></div>
+          <div class="color-name">Steel Gray</div>
+          <div class="color-hex">#4A4A4A</div>
+          <div class="color-description">Industrial gray like amplifier metal and backstage equipment</div>
+        </div>
+
+        <div class="color-card">
+          <div class="color-swatch" style="background-color: var(--color-clown-purple);"></div>
+          <div class="color-name">Electric Purple</div>
+          <div class="color-hex">#800080</div>
+          <div class="color-description">Vibrant purple hair dye and neon stage lighting with attitude</div>
+        </div>
+      </div>
+
+      <div class="inspiration-section">
+        <h3 class="inspiration-title">🎭 Inspiration</h3>
+        <p class="inspiration-text">
+          Welcome to Clown Town isn't your childhood circus – it's where face paint meets face melting guitar solos. Picture a carnival after dark, where the big top has been replaced by a concert venue, and the only juggling happening is between power chords and drum beats. This palette captures the rebellious spirit of performers who traded balloon animals for leather pants and decided that entertainment should have a dangerous edge. It's the color of mischief with a Marshall stack backing track.
+        </p>
+      </div>
+
+      <div style="text-align: center;">
+        <a href="index.html" class="back-link">← Back to Collection</a>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>Created with 🤘 and a touch of chaos by Katie O'Connor</p>
+    <p>Swatch and Palette Maker Collection</p>
+  </footer>
+</body>
+</html>
