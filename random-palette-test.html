@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Whispers of a Distant Planet - Color Palette</title>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=IBM+Plex+Sans&family=Space+Mono&display=swap" rel="stylesheet">
+  <!-- Color Utility System -->
+  <link rel="stylesheet" href="colors-utility.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'IBM Plex Sans', sans-serif;
+      background: linear-gradient(135deg, #2C2C54 0%, #5E239D 100%);
+      color: #F9F871;
+      min-height: 100vh;
+    }
+
+    header {
+      width: 100%;
+      background: linear-gradient(135deg, #A6E3E9 0%, #FF6B6B 100%);
+      color: #2C2C54;
+      padding: 60px 0;
+      text-align: center;
+      position: relative;
+      font-family: 'Fredericka the Great', cursive;
+      clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+      box-shadow: 0 10px 30px rgba(44, 44, 84, 0.3);
+      margin-bottom: 40px;
+      border-bottom: 3px solid #5E239D;
+    }
+
+    header::before,
+    header::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 8px;
+      left: 0;
+      background-repeat: repeat;
+      background-size: 16px 8px;
+      opacity: 0.2;
+    }
+
+    header::before {
+      top: 0;
+      background-image: linear-gradient(to right, #2C2C54 50%, transparent 50%);
+    }
+
+    header::after {
+      bottom: 0;
+      background-image: linear-gradient(to right, #5E239D 50%, transparent 50%);
+    }
+
+    header h1 {
+      font-size: 3em;
+      margin: 0;
+      text-shadow: 1px 1px 3px rgba(44, 44, 84, 0.3);
+    }
+
+    header p {
+      font-size: 1.2em;
+      margin-top: 10px;
+      font-style: italic;
+      opacity: 0.9;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+
+    .palette-showcase {
+      background: rgba(255, 255, 255, 0.95);
+      border-radius: 20px;
+      padding: 40px;
+      margin-bottom: 40px;
+      box-shadow: 0 15px 35px rgba(44, 44, 84, 0.4);
+      border: 3px solid #A6E3E9;
+    }
+
+    .palette-title {
+      font-family: 'Fredericka the Great', cursive;
+      font-size: 2.5rem;
+      color: #2C2C54;
+      margin-bottom: 20px;
+      text-align: center;
+      text-shadow: 1px 1px 2px rgba(166, 227, 233, 0.3);
+    }
+
+    .palette-description {
+      font-size: 1.1rem;
+      color: #5E239D;
+      margin-bottom: 30px;
+      line-height: 1.6;
+      font-style: italic;
+      text-align: center;
+    }
+
+    .palette-colors {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+      margin-bottom: 30px;
+    }
+
+    .color-card {
+      background: rgba(255, 255, 255, 0.9);
+      border-radius: 15px;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 8px 20px rgba(44, 44, 84, 0.3);
+      border: 2px solid transparent;
+      transition: all 0.3s ease;
+    }
+
+    .color-card:hover {
+      border-color: #A6E3E9;
+      box-shadow: 0 12px 25px rgba(44, 44, 84, 0.4);
+      transform: translateY(-2px);
+    }
+
+    .color-swatch {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      margin: 0 auto 15px;
+      border: 4px solid white;
+      box-shadow: 0 6px 15px rgba(44, 44, 84, 0.4);
+    }
+
+    .color-name {
+      font-family: 'Fredericka the Great', cursive;
+      font-size: 1.2rem;
+      color: #2C2C54;
+      margin-bottom: 5px;
+    }
+
+    .color-hex {
+      font-family: 'Space Mono', monospace;
+      font-size: 0.9rem;
+      color: #5E239D;
+      margin-bottom: 8px;
+    }
+
+    .color-description {
+      font-size: 0.8rem;
+      color: #5E239D;
+      line-height: 1.4;
+    }
+
+    .inspiration-section {
+      background: rgba(255, 255, 255, 0.9);
+      border-radius: 15px;
+      padding: 30px;
+      margin-bottom: 30px;
+      border-left: 5px solid #A6E3E9;
+      box-shadow: 0 8px 20px rgba(44, 44, 84, 0.2);
+    }
+
+    .inspiration-title {
+      font-family: 'Fredericka the Great', cursive;
+      font-size: 1.8rem;
+      color: #A6E3E9;
+      margin-bottom: 15px;
+    }
+
+    .inspiration-text {
+      font-size: 1rem;
+      line-height: 1.6;
+      color: #2C2C54;
+    }
+
+    .back-link {
+      display: inline-block;
+      padding: 12px 24px;
+      background: #6B7A9A;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 0.95rem;
+      border: 2px solid #5A6B8A;
+      margin-top: 20px;
+      transition: all 0.3s ease;
+      text-shadow: none;
+    }
+
+    .back-link:hover {
+      background: #5A6B8A;
+      border-color: #4A5B7A;
+      box-shadow: 0 4px 12px rgba(107, 122, 154, 0.3);
+      transform: translateY(-1px);
+    }
+
+    footer {
+      background: linear-gradient(135deg, #2C2C54 0%, #5E239D 100%);
+      color: #F9F871;
+      text-align: center;
+      padding: 30px 20px;
+      font-family: 'Space Mono', monospace;
+      margin-top: 60px;
+      position: relative;
+      border-top: 3px solid #A6E3E9;
+    }
+
+    footer::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 5px;
+      background: repeating-linear-gradient(
+        90deg,
+        #A6E3E9 0px,
+        #A6E3E9 10px,
+        #FF6B6B 10px,
+        #FF6B6B 20px
+      );
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>🪐 Whispers of a Distant Planet</h1>
+    <p>Where cosmic hues meet alien serenity</p>
+  </header>
+
+  <div class="container">
+    <div class="palette-showcase">
+      <h2 class="palette-title">Whispers of a Distant Planet</h2>
+      <p class="palette-description">
+        A surreal blend of cosmic hues and alien serenity. This palette evokes the feeling of standing on the edge of a quiet, glowing world—where the sky hums in violet and the ground shimmers in teal.
+      </p>
+
+      <div class="palette-colors">
+        <div class="color-card">
+          <div class="color-swatch" style="background-color: #5E239D;"></div>
+          <div class="color-name">Nebula Violet</div>
+          <div class="color-hex">#5E239D</div>
+          <div class="color-description">Deep cosmic purple like distant galaxies and alien twilight skies</div>
+        </div>
+
+        <div class="color-card">
+          <div class="color-swatch" style="background-color: #A6E3E9;"></div>
+          <div class="color-name">Cryo Mist</div>
+          <div class="color-hex">#A6E3E9</div>
+          <div class="color-description">Ethereal blue-green like frozen atmosphere and otherworldly morning mist</div>
+        </div>
+
+        <div class="color-card">
+          <div class="color-swatch" style="background-color: #F9F871;"></div>
+          <div class="color-name">Solar Bloom</div>
+          <div class="color-hex">#F9F871</div>
+          <div class="color-description">Bright cosmic yellow like distant suns and bioluminescent alien flora</div>
+        </div>
+
+        <div class="color-card">
+          <div class="color-swatch" style="background-color: #FF6B6B;"></div>
+          <div class="color-name">Crimson Echo</div>
+          <div class="color-hex">#FF6B6B</div>
+          <div class="color-description">Warm coral red like the pulse of distant life and alien sunset reflections</div>
+        </div>
+
+        <div class="color-card">
+          <div class="color-swatch" style="background-color: #2C2C54;"></div>
+          <div class="color-name">Void Indigo</div>
+          <div class="color-hex">#2C2C54</div>
+          <div class="color-description">Deep space indigo like the infinite void between stars and planets</div>
+        </div>
+      </div>
+
+      <div class="inspiration-section">
+        <h3 class="inspiration-title">🌌 Inspiration</h3>
+        <p class="inspiration-text">
+          Picture yourself standing on the crystalline surface of an undiscovered world, where three moons hang in a violet sky and bioluminescent plants pulse with golden light. The air shimmers with cryo mist, and in the distance, crimson auroras dance against the void of space. This palette captures that moment of cosmic wonder—where the familiar becomes alien and beauty exists in the most unexpected forms across the universe.
+        </p>
+      </div>
+
+      <div style="text-align: center;">
+        <a href="index.html" class="back-link">← Back to Collection</a>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>Created with ❤️ and a touch of cosmic wonder by Katie O'Connor</p>
+    <p>Swatch and Palette Maker Collection</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Late Night Blooms - Color Palette</title>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=IBM+Plex+Sans&family=Space+Mono&display=swap" rel="stylesheet">
+  <!-- Color Utility System -->
+  <link rel="stylesheet" href="colors-utility.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'IBM Plex Sans', sans-serif;
+      background-color: var(--color-dark-blooms); /* Midnight Dahlia */
+      color: var(--color-blooms-light); /* Dewdrop Silver */
+      min-height: 100vh;
+    }
+
+    header {
+      background-color: var(--color-blooms-velvet); /* Velvet Rose */
+      color: white;
+      padding: 40px 20px;
+      text-align: center;
+      position: relative;
+      font-family: 'Fredericka the Great', cursive;
+      border-bottom: 5px dashed var(--color-dark-blooms);
+      clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+      box-shadow: inset 0 -10px 0 var(--color-blooms-lavender), inset 0 -20px 0 var(--color-dark-blooms);
+      margin-bottom: 60px;
+    }
+
+    header::before,
+    header::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 10px;
+      left: 0;
+      background-repeat: repeat;
+      background-size: 20px 10px;
+      opacity: 0.3;
+    }
+
+    header::before {
+      top: 0;
+      background-image: linear-gradient(to right, var(--color-dark-blooms) 50%, transparent 50%);
+    }
+
+    header::after {
+      bottom: 0;
+      background-image: linear-gradient(to right, var(--color-blooms-lavender) 50%, transparent 50%);
+    }
+
+    header h1 {
+      font-size: 3em;
+      margin: 0;
+      text-shadow: 2px 2px var(--color-dark-blooms);
+    }
+
+    header p {
+      font-size: 1.2em;
+      margin-top: 10px;
+      font-style: italic;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+
+    .palette-showcase {
+      background: rgba(216, 215, 227, 0.95);
+      border-radius: 20px;
+      padding: 40px;
+      margin-bottom: 40px;
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+      border: 3px dashed var(--color-blooms-velvet);
+    }
+
+    .palette-title {
+      font-family: 'Fredericka the Great', cursive;
+      font-size: 2.5rem;
+      color: var(--color-dark-blooms);
+      margin-bottom: 20px;
+      text-align: center;
+      text-shadow: 1px 1px 2px rgba(124, 63, 88, 0.3);
+    }
+
+    .palette-description {
+      font-size: 1.1rem;
+      color: var(--color-blooms-velvet);
+      margin-bottom: 30px;
+      line-height: 1.6;
+      font-style: italic;
+      text-align: center;
+    }
+
+    .palette-colors {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+      margin-bottom: 30px;
+    }
+
+    .color-card {
+      background: white;
+      border-radius: 15px;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+      border: 2px solid transparent;
+    }
+
+    .color-card:hover {
+      border-color: var(--color-blooms-velvet);
+      box-shadow: 0 12px 25px rgba(124, 63, 88, 0.3);
+    }
+
+    .color-swatch {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      margin: 0 auto 15px;
+      border: 4px solid white;
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+    }
+
+    .color-name {
+      font-family: 'Fredericka the Great', cursive;
+      font-size: 1.2rem;
+      color: var(--color-dark-blooms);
+      margin-bottom: 5px;
+    }
+
+    .color-hex {
+      font-family: 'Space Mono', monospace;
+      font-size: 0.9rem;
+      color: var(--color-blooms-velvet);
+      margin-bottom: 8px;
+    }
+
+    .color-description {
+      font-size: 0.8rem;
+      color: #666;
+      line-height: 1.4;
+    }
+
+    .inspiration-section {
+      background: var(--color-blooms-light);
+      border-radius: 15px;
+      padding: 30px;
+      margin-bottom: 30px;
+      border-left: 5px solid var(--color-blooms-velvet);
+    }
+
+    .inspiration-title {
+      font-family: 'Fredericka the Great', cursive;
+      font-size: 1.8rem;
+      color: var(--color-blooms-velvet);
+      margin-bottom: 15px;
+    }
+
+    .inspiration-text {
+      font-size: 1rem;
+      line-height: 1.6;
+      color: var(--color-dark-blooms);
+    }
+
+    .back-link {
+      display: inline-block;
+      padding: 12px 24px;
+      background: #6B7A9A;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 0.95rem;
+      border: 2px solid #5A6B8A;
+      margin-top: 20px;
+      transition: all 0.3s ease;
+      text-shadow: none;
+    }
+
+    .back-link:hover {
+      background: #5A6B8A;
+      border-color: #4A5B7A;
+      box-shadow: 0 4px 12px rgba(107, 122, 154, 0.3);
+      transform: translateY(-1px);
+    }
+
+    footer {
+      background-color: var(--color-dark-blooms);
+      color: var(--color-blooms-light);
+      text-align: center;
+      padding: 20px;
+      font-family: 'Space Mono', monospace;
+      margin-top: 60px;
+      position: relative;
+    }
+
+    footer::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 5px;
+      background: repeating-linear-gradient(
+        90deg,
+        var(--color-blooms-velvet) 0px,
+        var(--color-blooms-velvet) 10px,
+        var(--color-blooms-lavender) 10px,
+        var(--color-blooms-lavender) 20px
+      );
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>🌙🌸 Late Night Blooms</h1>
+    <p>Where twilight gardens meet nocturnal romance</p>
+  </header>
+
+  <div class="container">
+    <div class="palette-showcase">
+      <h2 class="palette-title">Late Night Blooms</h2>
+      <p class="palette-description">
+        A moody, romantic palette that captures the essence of twilight gardens. Deep floral tones meet soft nocturnal hues, perfect for designs that aim to be both bold and serene. These colors whisper of moonlit petals and secret garden encounters.
+      </p>
+
+      <div class="palette-colors">
+        <div class="color-card">
+          <div class="color-swatch" style="background-color: var(--color-dark-blooms);"></div>
+          <div class="color-name">Midnight Dahlia</div>
+          <div class="color-hex">#2C1B33</div>
+          <div class="color-description">Deep purple-black like the mysterious shadows between midnight blooms</div>
+        </div>
+
+        <div class="color-card">
+          <div class="color-swatch" style="background-color: var(--color-blooms-lavender);"></div>
+          <div class="color-name">Moonlit Petal</div>
+          <div class="color-hex">#A68BAF</div>
+          <div class="color-description">Soft lavender that catches moonbeams on delicate flower petals</div>
+        </div>
+
+        <div class="color-card">
+          <div class="color-swatch" style="background-color: var(--color-blooms-velvet);"></div>
+          <div class="color-name">Velvet Rose</div>
+          <div class="color-hex">#7C3F58</div>
+          <div class="color-description">Rich rose-purple like velvety petals touched by twilight romance</div>
+        </div>
+
+        <div class="color-card">
+          <div class="color-swatch" style="background-color: var(--color-blooms-light);"></div>
+          <div class="color-name">Dewdrop Silver</div>
+          <div class="color-hex">#D8D7E3</div>
+          <div class="color-description">Ethereal silver-lilac like morning dew on nighttime blossoms</div>
+        </div>
+      </div>
+
+      <div class="inspiration-section">
+        <h3 class="inspiration-title">🌺 Inspiration</h3>
+        <p class="inspiration-text">
+          Late Night Blooms captures the magic of a garden after sunset, when the air is heavy with perfume and mystery. Picture yourself wandering through moonlit paths where night-blooming flowers release their secrets to the darkness. This palette speaks to the romantic soul that finds beauty in the quiet hours, when shadows dance with silver light and every petal holds the promise of hidden stories. It's the color of whispered poetry and stolen glances beneath star-kissed blossoms.
+        </p>
+      </div>
+
+      <div style="text-align: center;">
+        <a href="index.html" class="back-link">← Back to Collection</a>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>Created with 🌙 and nocturnal magic by Katie O'Connor</p>
+    <p>Swatch and Palette Maker Collection</p>
+  </footer>
+</body>
+</html>

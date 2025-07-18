@@ -1,0 +1,207 @@
+/* ==========================================================================
+   COLOR PALETTE UTILITY SYSTEM
+   Standardized colors for the Color Palette Collection
+   ========================================================================== */
+
+:root {
+  /* ==========================================================================
+     CORE DESIGN SYSTEM COLORS
+     These are the foundational colors used across all pages
+     ========================================================================== */
+
+  /* Primary Brand Colors */
+  --color-brand-pink: #FF6EC7;        /* Cotton Candy Static / Magenta */
+  --color-brand-mint: #00FFD1;        /* Cyber Mint / Turquoise */
+  --color-brand-sage: #B2C2BF;        /* Moonlit Vermouth / Sage Green */
+  --color-brand-espresso: #3B2F2F;    /* Burnt Espresso / Dark Brown */
+  --color-brand-walnut: #4B3621;      /* Dusty Walnut / Medium Brown */
+
+  /* ==========================================================================
+     STANDARDIZED COLOR FAMILIES
+     Similar colors grouped and optimized for consistency
+     ========================================================================== */
+
+  /* DARK COLORS FAMILY - Blacks, Deep Grays, Dark Purples */
+  --color-dark-black: #0D0D0D;        /* Asphalt Black (Rickshaw) */
+  --color-dark-charcoal: #2B2B2B;     /* Asphalt Dreams (Skateboard Hank) */
+  --color-dark-midnight: #1A0B1A;     /* Midnight Mayhem (Clown Town) */
+  --color-dark-neural: #1F1147;       /* Neural Night (Twinkle) */
+  --color-dark-void: #2C2C54;         /* Void Indigo (Distant Planet) */
+  --color-dark-cafe: #2E1A47;         /* Midnight Cafe Purple */
+  --color-dark-blooms: #2C1B33;       /* Late Night Blooms Purple */
+  --color-dark-steel: #3A3F4A;        /* Lake Shore Steel (Chicago) */
+  --color-dark-sacred: #3B3A3F;       /* Sacred Silence (Prayer) */
+  --color-dark-ocean: #3C4A4E;        /* Prayer Turquoise Dark */
+
+  /* MEDIUM GRAY FAMILY */
+  --color-gray-industrial: #4A4A4A;   /* Steel Gray (Clown Town) / Industrial Gray */
+  --color-gray-clouded: #5E6C7A;      /* Clouded Glass (Chicago) */
+  --color-gray-ocean: #7A9EB1;        /* Prayer Turquoise Medium */
+
+  /* BROWN FAMILY */
+  --color-brown-saddle: #8B4513;      /* Saddle Brown (multiple palettes) */
+  --color-brown-dark: #6B4423;        /* Dark Coffee Brown (Midnight Cafe) */
+  --color-brown-hickory: #D2691E;     /* Hickory Smoke (Skateboard Hank) */
+
+  /* RED FAMILY */
+  --color-red-dark: #8B0000;          /* Dark Red (Clown Town & Skateboard Hank) */
+  --color-red-grease: #CC2936;        /* Grease Fire Red (Rickshaw) */
+
+  /* LIGHT/CREAM FAMILY */
+  --color-cream-bone: #F5F5DC;        /* Bone White (Clown Town) */
+  --color-cream-bleached: #F5F5F5;    /* Bleached White (Rickshaw) */
+  --color-cream-cornbread: #F5DEB3;   /* Cornbread Cream (Skateboard Hank) */
+  --color-cream-cafe: #F5E6D3;        /* Cafe Cream (Midnight Cafe) */
+  --color-cream-whispered: #F6E7D7;   /* Whispered Candlelight (Prayer) */
+  --color-cream-silicon: #F9F7F3;     /* Silicon Moonlight (Twinkle) */
+  --color-cream-coconut: #FDF6E3;     /* Coconut Cream (Guinea Pig) */
+  --color-cream-vermouth: #F0EAD6;    /* Light cream variation */
+
+  /* GOLD/YELLOW FAMILY */
+  --color-gold-pure: #FFD700;         /* Pure Gold (Skateboard Hank) */
+  --color-gold-mustard: #FFD23F;      /* Mustard Yellow (Rickshaw) */
+  --color-gold-rich: #D4AF37;         /* Rich Gold (Midnight Cafe) */
+  --color-gold-break: #F2D398;        /* Golden Break (Chicago) */
+  --color-gold-solar: #F9F871;        /* Solar Bloom (Distant Planet) */
+
+  /* ==========================================================================
+     PALETTE-SPECIFIC UNIQUE COLORS
+     Colors that are distinctive to individual palettes
+     ========================================================================== */
+
+  /* SUNSET CAFE IN MOROCCO */
+  --color-morocco-saffron: #D98236;   /* Saffron Spice */
+  --color-morocco-terracotta: #B04A2B; /* Terracotta Clay */
+  --color-morocco-mint: #6C9A8B;      /* Desert Mint */
+  --color-morocco-indigo: #3C4A6B;    /* Twilight Indigo */
+
+  /* GUINEA PIG ISLAND */
+  --color-island-apricot: #F4A261;    /* Fuzzy Apricot */
+  --color-island-teal: #2A9D8F;       /* Tropical Teal */
+  --color-island-coral: #E76F51;      /* Coral Drift */
+
+  /* WHISPERS OF A DISTANT PLANET */
+  --color-planet-nebula: #5E239D;     /* Nebula Violet */
+  --color-planet-cryo: #A6E3E9;       /* Cryo Mist */
+  --color-planet-coral: #FF6B6B;      /* Cosmic Coral */
+
+  /* CHICAGO AFTERNOON */
+  --color-chicago-pavement: #A89F91;  /* Rain-Slick Pavement */
+
+  /* TWINKLE AI */
+  --color-twinkle-quantum: #5A4FCF;   /* Quantum Glow */
+  --color-twinkle-stellar: #B8E1FF;   /* Stellar Whisper */
+
+  /* PRAYER PALETTES */
+  --color-prayer-rose: #D9A5B3;       /* Rose Devotion */
+  --color-prayer-harmony: #7C6A9C;    /* Midnight Harmony */
+  --color-prayer-turquoise: #AEEBE3;  /* Prayer Turquoise */
+  --color-prayer-blush: #F3D6D2;      /* Blush Benediction */
+
+  /* LATE NIGHT BLOOMS */
+  --color-blooms-lavender: #A68BAF;   /* Blooms Lavender */
+  --color-blooms-velvet: #7C3F58;     /* Velvet Rose */
+  --color-blooms-light: #D8D7E3;      /* Light Blooms */
+
+  /* CLOWN TOWN */
+  --color-clown-inferno: #FF4500;     /* Inferno Orange */
+  --color-clown-purple: #800080;      /* Electric Purple */
+
+  /* SKATEBOARD HANK'S */
+  --color-hank-pickle: #228B22;       /* Pickle Juice Green */
+
+  /* CANDLE MELTDOWN */
+  --color-candle-waxy: #2F1B14;       /* Deep Waxy Red */
+
+  /* ==========================================================================
+     SEMANTIC COLOR ALIASES
+     Meaningful names for common use cases
+     ========================================================================== */
+
+  /* Text Colors */
+  --color-text-primary: var(--color-brand-espresso);
+  --color-text-secondary: var(--color-brand-walnut);
+  --color-text-light: var(--color-cream-bone);
+  --color-text-accent: var(--color-brand-pink);
+
+  /* Background Colors */
+  --color-bg-primary: var(--color-brand-sage);
+  --color-bg-dark: var(--color-dark-black);
+  --color-bg-light: var(--color-cream-bone);
+  --color-bg-card: #FFFFFF;
+
+  /* Border Colors */
+  --color-border-primary: var(--color-brand-pink);
+  --color-border-secondary: var(--color-brand-espresso);
+  --color-border-accent: var(--color-brand-walnut);
+
+  /* Interactive Colors */
+  --color-link-primary: var(--color-brand-pink);
+  --color-link-hover: var(--color-brand-mint);
+  --color-button-primary: linear-gradient(45deg, var(--color-brand-pink), var(--color-brand-mint));
+  --color-button-secondary: linear-gradient(45deg, var(--color-red-dark), var(--color-clown-inferno));
+
+  /* ==========================================================================
+     UTILITY CLASSES FOR QUICK APPLICATION
+     ========================================================================== */
+}
+
+/* Text Color Utilities */
+.text-primary { color: var(--color-text-primary); }
+.text-secondary { color: var(--color-text-secondary); }
+.text-light { color: var(--color-text-light); }
+.text-accent { color: var(--color-text-accent); }
+.text-brand-pink { color: var(--color-brand-pink); }
+.text-brand-mint { color: var(--color-brand-mint); }
+
+/* Background Color Utilities */
+.bg-primary { background-color: var(--color-bg-primary); }
+.bg-dark { background-color: var(--color-bg-dark); }
+.bg-light { background-color: var(--color-bg-light); }
+.bg-card { background-color: var(--color-bg-card); }
+.bg-brand-pink { background-color: var(--color-brand-pink); }
+.bg-brand-mint { background-color: var(--color-brand-mint); }
+
+/* Border Color Utilities */
+.border-primary { border-color: var(--color-border-primary); }
+.border-secondary { border-color: var(--color-border-secondary); }
+.border-accent { border-color: var(--color-border-accent); }
+
+/* ==========================================================================
+   STANDARDIZATION MAPPING
+   Documentation of color consolidations made
+   ========================================================================== */
+
+/*
+DARK COLORS CONSOLIDATED:
+- #0D0D0D → --color-dark-black (Rickshaw Billie's)
+- #1A0B1A → --color-dark-midnight (Clown Town)
+- #1F1147 → --color-dark-neural (Twinkle)
+- #2B2B2B → --color-dark-charcoal (Skateboard Hank's)
+- #2C1B33 → --color-dark-blooms (Late Blooms)
+- #2C2C54 → --color-dark-void (Distant Planet)
+- #2E1A47 → --color-dark-cafe (Midnight Cafe)
+
+LIGHT/CREAM COLORS CONSOLIDATED:
+- #F5F5DC → --color-cream-bone (Clown Town)
+- #F5F5F5 → --color-cream-bleached (Rickshaw)
+- #F5E6D3 → --color-cream-cafe (Midnight Cafe)
+- #F6E7D7 → --color-cream-whispered (Prayer)
+- #F9F7F3 → --color-cream-silicon (Twinkle)
+- #FDF6E3 → --color-cream-coconut (Guinea Pig)
+
+BROWN COLORS CONSOLIDATED:
+- #8B4513 → --color-brown-saddle (used in multiple palettes)
+- #6B4423 → --color-brown-dark (Midnight Cafe)
+- #4B3621 → --color-brand-walnut (site theme)
+
+RED COLORS CONSOLIDATED:
+- #8B0000 → --color-red-dark (Clown Town & Skateboard Hank - exact match!)
+- #CC2936 → --color-red-grease (Rickshaw)
+
+GOLD/YELLOW COLORS CONSOLIDATED:
+- #FFD700 → --color-gold-pure (Skateboard Hank)
+- #FFD23F → --color-gold-mustard (Rickshaw)
+- #D4AF37 → --color-gold-rich (Midnight Cafe)
+- #F2D398 → --color-gold-break (Chicago)
+*/

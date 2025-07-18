@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rickshaw Billie's Burger Patrol - Color Palette</title>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=IBM+Plex+Sans&family=Space+Mono&display=swap" rel="stylesheet">
+  <!-- Color Utility System -->
+  <link rel="stylesheet" href="colors-utility.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'IBM Plex Sans', sans-serif;
+      background-color: var(--color-dark-black); /* Asphalt Black */
+      color: var(--color-cream-bleached); /* Bleached White */
+      min-height: 100vh;
+    }
+
+    header {
+      background-color: var(--color-red-grease); /* Grease Fire Red */
+      color: white;
+      padding: 40px 20px;
+      text-align: center;
+      position: relative;
+      font-family: 'Fredericka the Great', cursive;
+      border-bottom: 5px dashed var(--color-dark-black);
+      clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+      box-shadow: inset 0 -10px 0 var(--color-gold-mustard), inset 0 -20px 0 var(--color-dark-black);
+      margin-bottom: 60px;
+    }
+
+    header::before,
+    header::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 10px;
+      left: 0;
+      background-repeat: repeat;
+      background-size: 20px 10px;
+      opacity: 0.3;
+    }
+
+    header::before {
+      top: 0;
+      background-image: linear-gradient(to right, var(--color-dark-black) 50%, transparent 50%);
+    }
+
+    header::after {
+      bottom: 0;
+      background-image: linear-gradient(to right, var(--color-gold-mustard) 50%, transparent 50%);
+    }
+
+    header h1 {
+      font-size: 3em;
+      margin: 0;
+      text-shadow: 3px 3px var(--color-dark-black);
+      letter-spacing: 1px;
+    }
+
+    header p {
+      font-size: 1.2em;
+      margin-top: 10px;
+      font-style: italic;
+      text-shadow: 1px 1px var(--color-dark-black);
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+
+    .palette-showcase {
+      background: rgba(245, 245, 245, 0.95);
+      border-radius: 20px;
+      padding: 40px;
+      margin-bottom: 40px;
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);
+      border: 3px dashed var(--color-red-grease);
+    }
+
+    .palette-title {
+      font-family: 'Fredericka the Great', cursive;
+      font-size: 2.5rem;
+      color: var(--color-dark-black);
+      margin-bottom: 20px;
+      text-align: center;
+      text-shadow: 1px 1px 2px rgba(204, 41, 54, 0.3);
+    }
+
+    .palette-description {
+      font-size: 1.1rem;
+      color: var(--color-red-grease);
+      margin-bottom: 30px;
+      line-height: 1.6;
+      font-style: italic;
+      text-align: center;
+    }
+
+    .palette-colors {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+      margin-bottom: 30px;
+    }
+
+    .color-card {
+      background: white;
+      border-radius: 15px;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+      border: 2px solid transparent;
+    }
+
+    .color-card:hover {
+      border-color: var(--color-red-grease);
+      box-shadow: 0 12px 25px rgba(204, 41, 54, 0.4);
+    }
+
+    .color-swatch {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      margin: 0 auto 15px;
+      border: 4px solid white;
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+    }
+
+    .color-name {
+      font-family: 'Fredericka the Great', cursive;
+      font-size: 1.2rem;
+      color: var(--color-dark-black);
+      margin-bottom: 5px;
+    }
+
+    .color-hex {
+      font-family: 'Space Mono', monospace;
+      font-size: 0.9rem;
+      color: var(--color-red-grease);
+      margin-bottom: 8px;
+    }
+
+    .color-description {
+      font-size: 0.8rem;
+      color: #666;
+      line-height: 1.4;
+    }
+
+    .inspiration-section {
+      background: var(--color-cream-bleached);
+      border-radius: 15px;
+      padding: 30px;
+      margin-bottom: 30px;
+      border-left: 5px solid var(--color-red-grease);
+    }
+
+    .inspiration-title {
+      font-family: 'Fredericka the Great', cursive;
+      font-size: 1.8rem;
+      color: var(--color-red-grease);
+      margin-bottom: 15px;
+    }
+
+    .inspiration-text {
+      font-size: 1rem;
+      line-height: 1.6;
+      color: var(--color-dark-black);
+    }
+
+    .back-link {
+      display: inline-block;
+      padding: 15px 30px;
+      background: linear-gradient(45deg, var(--color-red-grease), var(--color-gold-mustard));
+      color: white;
+      text-decoration: none;
+      border-radius: 25px;
+      font-weight: bold;
+      font-size: 1rem;
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+      border: 2px solid transparent;
+      margin-top: 20px;
+    }
+
+    .back-link:hover {
+      border-color: var(--color-cream-bleached);
+      box-shadow: 0 5px 15px rgba(204, 41, 54, 0.4);
+    }
+
+    footer {
+      background-color: var(--color-dark-black);
+      color: var(--color-cream-bleached);
+      text-align: center;
+      padding: 20px;
+      font-family: 'Space Mono', monospace;
+      margin-top: 60px;
+      position: relative;
+    }
+
+    footer::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 5px;
+      background: repeating-linear-gradient(
+        90deg,
+        var(--color-red-grease) 0px,
+        var(--color-red-grease) 10px,
+        var(--color-gold-mustard) 10px,
+        var(--color-gold-mustard) 20px
+      );
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>🍔🚲 Rickshaw Billie's Burger Patrol</h1>
+    <p>Street food meets street punk - delivering beats and burgers</p>
+  </header>
+
+  <div class="container">
+    <div class="palette-showcase">
+      <h2 class="palette-title">Rickshaw Billie's Burger Patrol</h2>
+      <p class="palette-description">
+        A hardcore rock band palette built for the streets. Perfect for band merch that needs to look tough, gritty, and ready to deliver both sonic destruction and late-night sustenance. These colors scream underground venue authenticity.
+      </p>
+
+      <div class="palette-colors">
+        <div class="color-card">
+          <div class="color-swatch" style="background-color: var(--color-dark-black);"></div>
+          <div class="color-name">Asphalt Black</div>
+          <div class="color-hex">#0D0D0D</div>
+          <div class="color-description">Deep black like midnight delivery runs and underground venue floors</div>
+        </div>
+
+        <div class="color-card">
+          <div class="color-swatch" style="background-color: var(--color-red-grease);"></div>
+          <div class="color-name">Grease Fire Red</div>
+          <div class="color-hex">#CC2936</div>
+          <div class="color-description">Intense red like kitchen flames and stage spotlights bleeding through smoke</div>
+        </div>
+
+        <div class="color-card">
+          <div class="color-swatch" style="background-color: var(--color-gold-mustard);"></div>
+          <div class="color-name">Mustard Mayhem</div>
+          <div class="color-hex">#FFD23F</div>
+          <div class="color-description">Bold yellow that pops like neon signs and condiment chaos</div>
+        </div>
+
+        <div class="color-card">
+          <div class="color-swatch" style="background-color: var(--color-cream-bleached);"></div>
+          <div class="color-name">Bleached White</div>
+          <div class="color-hex">#F5F5F5</div>
+          <div class="color-description">Stark white like worn band tees and rickshaw delivery bags</div>
+        </div>
+
+        <div class="color-card">
+          <div class="color-swatch" style="background-color: var(--color-gray-industrial);"></div>
+          <div class="color-name">Steel Wheels</div>
+          <div class="color-hex">#4A4A4A</div>
+          <div class="color-description">Industrial gray like bike frames and amplifier grilles</div>
+        </div>
+
+        <div class="color-card">
+          <div class="color-swatch" style="background-color: var(--color-brown-saddle);"></div>
+          <div class="color-name">Leather Jacket Brown</div>
+          <div class="color-hex">#8B4513</div>
+          <div class="color-description">Rich brown like vintage leather and perfectly charred burger patties</div>
+        </div>
+      </div>
+
+      <div class="inspiration-section">
+        <h3 class="inspiration-title">🎸 Inspiration</h3>
+        <p class="inspiration-text">
+          Rickshaw Billie's Burger Patrol represents the intersection of street food culture and hardcore punk rock. Picture a band that delivers burgers by day and crushes stages by night, where every t-shirt tells the story of late-night rides through neon-lit streets. This palette captures the raw energy of DIY music scenes mixed with the honest grit of food service hustle. It's the color scheme for merch that looks equally at home in a dive bar or a food truck line – authentic, unapologetic, and built to last through countless shows and deliveries.
+        </p>
+      </div>
+
+      <div style="text-align: center;">
+        <a href="index.html" class="back-link">← Back to Collection</a>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>Created with 🤘 and extra pickles by Katie O'Connor</p>
+    <p>Swatch and Palette Maker Collection</p>
+  </footer>
+</body>
+</html>
