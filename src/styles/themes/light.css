@@ -1,0 +1,42 @@
+:root {
+  /* ===== LIGHT THEME OVERRIDES ===== */
+  
+  /* Brand Colors (same as default but documented for clarity) */
+  --primary-color: #667eea;
+  --primary-dark: #764ba2;
+  --secondary-color: #4ecdc4;
+  --accent-color: #feca57;
+  
+  /* Status Colors */
+  --success-color: #96ceb4;
+  --warning-color: #feca57;
+  --error-color: #ff6b6b;
+  --info-color: #45b7d1;
+  
+  /* Neutral Colors for Light Theme */
+  --gray-50: #f8f9fa;
+  --gray-100: #e9ecef;
+  --gray-200: #dee2e6;
+  --gray-300: #ced4da;
+  --gray-400: #adb5bd;
+  --gray-500: #6c757d;
+  --gray-600: #495057;
+  --gray-700: #343a40;
+  --gray-800: #212529;
+  --gray-900: #000000;
+  
+  /* Semantic Colors (Light Theme) */
+  --background-primary: var(--white);
+  --background-secondary: var(--gray-50);
+  --background-hero: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+  --text-primary: var(--gray-800);
+  --text-secondary: var(--gray-600);
+  --text-muted: var(--gray-500);
+  --text-inverse: var(--white);
+  
+  /* Shadows (adjusted for light theme) */
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
